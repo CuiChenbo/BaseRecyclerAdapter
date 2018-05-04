@@ -24,7 +24,6 @@ public class MainActivity extends AppCompatActivity {
             ,"H","I","J","K","L","M","N"
             ,"O","P","Q","R","S","T"
             ,"U","V","W","X","Y","Z");
-
     private RecyclerView rv ;
     private BaseRecyclerAdapter ap;
     private List<String> datas;
