@@ -66,6 +66,7 @@ public abstract class BaseRecyclerAdapter<T> extends RecyclerView.Adapter<BaseRe
         notifyItemInserted(items.size());
     }
 
+
     public void remove(int position) {
         items.remove(position);
         int internalPosition = position;
