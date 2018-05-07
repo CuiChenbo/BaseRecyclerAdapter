@@ -7,6 +7,7 @@ import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.ccb.pactera.baserecycleradapter.base.BaseRecyclerAdapter;
 import com.ccb.pactera.baserecycleradapter.base.BaseRecyclerHolder;
@@ -65,6 +66,12 @@ public class MainActivity extends AppCompatActivity {
         public void convert(BaseRecyclerHolder holder, final int position) {
             //链式调用
               holder.setText(R.id.tv,items.get(position))
+                      .setOnClickListener(holder.itemView, new View.OnClickListener() {
+                          @Override
+                          public void onClick(View view) {
+                              Toast.makeText(context,datas.get(position),Toast.LENGTH_SHORT).show();
+                          }
+                      })
                     .setOnClickListener(R.id.tv, new View.OnClickListener() {
                         @Override
                         public void onClick(View view) {
