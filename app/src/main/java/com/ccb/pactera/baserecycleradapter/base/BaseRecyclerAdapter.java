@@ -6,6 +6,7 @@ import android.support.annotation.LayoutRes;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v7.widget.RecyclerView;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
@@ -37,7 +38,7 @@ public abstract class BaseRecyclerAdapter<T> extends RecyclerView.Adapter<BaseRe
 
     @Override
     public BaseRecyclerHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        return new BaseRecyclerHolder(View.inflate(context,layoutRes,null));
+        return new BaseRecyclerHolder(LayoutInflater.from(context).inflate(layoutRes,null));
     }
 
     @Override
